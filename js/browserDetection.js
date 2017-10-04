@@ -68,6 +68,5 @@ function detectBrowser() {
         scoresObj[key] = total;
     }
 
-    console.log(scoresObj);
     return scoresObj;
 }

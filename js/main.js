@@ -24,7 +24,9 @@ window.onload = function() {
     var fp_4 = screenAndNav();
     var hash_4 = sha256(fp_4.toString());
 
-    var totalHash = sha256(hash_1 + hash_2 + hash_3 + hash_4);
+    var isMobile = detectMobile();
+
+    var totalHash = sha256(hash_1 + hash_2 + hash_3 + hash_4 + isMobile);
     totalHash = totalHash.toString().substring(0, 10);
 
     var highestScore = -1;
@@ -41,11 +43,22 @@ window.onload = function() {
 
     insertValue(highestBrowser);
     insertValue(totalHash);
+
+    console.log(fp_2);
 };
 
 
 
+function detectMobile() {
+    var width = screen.width;
+    var height = screen.height;
 
+    if( width < 800 && height < 800) {
+        return "mobile";
+    }
+
+    return "something else"
+}
 
 
 
