@@ -19,7 +19,7 @@ window.onload = function() {
     var hash_2 = sha256(fp_2.toString());
 
     var fp_3 = getBrowserAttributes();
-    var hash_3 = sha256(fp_3);
+    var hash_3 = sha256(fp_3.toString());
 
     var fp_4 = screenAndNav();
     var hash_4 = sha256(fp_4.toString());
