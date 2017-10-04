@@ -9,7 +9,7 @@ function insertValue(val) {
     var div = document.getElementById("value_value");
     div.appendChild(h2);
 }
-    
+
 
 window.onload = function() {
     var fp_1 = detectFonts();
@@ -18,11 +18,14 @@ window.onload = function() {
     var fp_2 = detectBrowser();
     var hash_2 = sha256(fp_2.toString());
 
-    var fp_3 = screenAndNav();
-    var hash_3 = sha256(fp_3.toString());
+    var fp_3 = getBrowserAttributes();
+    var hash_3 = sha256(fp_3);
 
-    var totalHash = sha256(hash_1 + hash_2 + hash_3);
-    var totalHash = totalHash.toString().substring(0, 10);
+    var fp_4 = screenAndNav();
+    var hash_4 = sha256(fp_4.toString());
+
+    var totalHash = sha256(hash_1 + hash_2 + hash_3 + hash_4);
+    totalHash = totalHash.toString().substring(0, 10);
 
     var highestScore = -1;
     var highestBrowser = "";
