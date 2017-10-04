@@ -15,8 +15,8 @@ function detectBrowser() {
     var isOpera = [];
     isOpera.push( !!window.opera );
     isOpera.push( !!window.opera || /opera|opr/i.test(navigator.userAgent) );
-    isOpera.push( (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0 );
-    isOpera.push( /^function \(/.test([].sort) );
+    // isOpera.push( (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0 );
+    // isOpera.push( /^function \(/.test([].sort) );
 
 
     // Firefox 1.0+
