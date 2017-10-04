@@ -1,0 +1,14 @@
+# humanstxt.org/
+# Heric Flores-Huerta
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+
+# THANKS
+
+    Obama
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, Javascript
