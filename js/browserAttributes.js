@@ -8,9 +8,9 @@ function getBrowserAttributes() {
 
 
     // check for existence and add the value of these attributes
+    // exclude userAgent, vendor, product, appName, appCodeName, and appVersion because they are commonly spoofed
     var methodsVal = ["taintEnabled"];
-    var propertiesVal = ["oscpu", "vendor", "platform", "product", "userAgent", "plugins", "appName", "appCodeName",
-        "appVersion", "doNotTrack", "buildID", "productSub", "cookieEnabled", "mimeTypes"];
+    var propertiesVal = ["oscpu", "platform", "plugins", "doNotTrack", "buildID", "productSub", "cookieEnabled", "mimeTypes"];
 
 
     for (var property_i in propertiesVal) {
@@ -30,7 +30,7 @@ function getBrowserAttributes() {
 
 
     // Check for existence of these attributes
-    var methodsEnum = ['vibrate', 'taintEnabled'];
+    var methodsEnum = ['vibrate'];
     var propertiesEnum = ['battery', 'getBattery', 'usb', 'activeVRDisplays', 'hardwareConcurrency', 'language', 'languages',
         'presentation', 'storageQuota',];
 

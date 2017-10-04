@@ -97,6 +97,33 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#heading_title {
+    text-align: center;
+}
+
+#content {
+    text-align: center;
+}
+
+#description {
+    text-align: center;
+}
+
+#footer {
+    align-content: center;
+    margin-top: 5em;
+}
+
+#implementation {
+    align-content: center;
+    margin: 0 auto;
+}
+
+#how {
+    border: solid black 1px;
+    padding: 2em;
+    margin: 0 auto;
+}
 
 
 

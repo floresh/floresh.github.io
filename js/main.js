@@ -2,12 +2,11 @@ var attributes = {};
 attributes["User_Agent"] = navigator.userAgent;
 
 // Insert Information Into Our Table
-function insertValue(val) {
-    var h2 = document.createElement("h2");
-    h2.innerText = val;
+function insertValue(val, id) {
+    var element = document.getElementById(id);
+    var text = element.innerHTML;
 
-    var div = document.getElementById("value_value");
-    div.appendChild(h2);
+    element.innerHTML = text + val;
 }
 
 
@@ -41,8 +40,8 @@ window.onload = function() {
         }
     }
 
-    insertValue(highestBrowser);
-    insertValue(totalHash);
+    insertValue(highestBrowser, 'browser_value');
+    insertValue(totalHash, 'hash_value');
 
     console.log(fp_2);
 };

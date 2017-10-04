@@ -21,7 +21,7 @@
         <!--[if gte IE 9]> Internet Explorer 9 or greater <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>Fingerprinting</h1>
+        <div id="heading_title" class="inner"><h1>Browser Fingerprinting Website</h1></div>
         <!--<script src="js/vendor/modernizr-3.5.0.min.js"></script>-->
         <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
         <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>-->
@@ -33,8 +33,38 @@
         <script src="js/sha256.js"></script>
         <script src="js/main.js"></script>
 
-        <div id="value_value">
-		    <!-- Fingerprint hash value goes here -->
-	    </div>
+        <div id="content">
+            <div class="inner">
+                <h2><span>Detected Browser: </span> <span id="browser_value"></span></h2>
+                <h2><span>Fingerpring Hash: </span> <span id="hash_value"></span></h2>
+                <!-- Fingerprint hash value goes here -->
+            </div>
+        </div>
+        <div id="footer">
+            <div id="implementation" class="inner">
+
+                <div id="description">
+                    <p>This website uses Browser & Version specific properties of browsers:</p>
+                    <p>Collected fingerprint values are collected and hashed using sha256.</p>
+                </div>
+
+                <table id="how">
+                    <tr>
+                        <td>Differences of browser populated vs "classic" objects (e.g. object mutability)</td>
+                    </tr>
+                    <tr>
+                        <td>navigator object properties and methods (e.g. navigator.oscpu)</td></tr>
+                    <tr>
+                        <td>Browser Specific properties & methods (e.g. window.chrome)</td>
+                    </tr>
+                    <tr>
+                        <td>screen object properties and methods (e.g. screen.width)</td>
+                    </tr>
+                    <tr>
+                        <td>Font Detection (e.g. Apple Symbols VS Droid Sans)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </body>
 </html>
