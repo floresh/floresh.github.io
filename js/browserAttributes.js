@@ -49,4 +49,7 @@ function getBrowserAttributes() {
             browserProperties.push(method);
         }
     }
+
+
+    return browserProperties;
 }
